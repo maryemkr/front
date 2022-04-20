@@ -1,0 +1,36 @@
+<div class="container">
+
+    <form #f="ngForm" (ngSubmit)="add(f)" >
+      <div class="form-group">
+          <label for="exampleFormControlInput1">Pseudo</label>
+          <input type="text" class="form-control" placeholder="Pseudo" required name="pseudo" #pseudo="ngModel" ngModel minlength="3">
+        </div>
+        <div class="alert alert-danger" *ngIf="msgError">{{msgError}}</div>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Mot de passe</label>
+          <input type="password" class="form-control" placeholder="Mot de passe" required name="mdp" #mdp="ngModel" ngModel>
+        </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email </label>
+        <input type="email" class="form-control" placeholder="name@example.com" required name="email" #email="ngModel" ngModel>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlInput1">Prénom</label>
+          <input type="text" class="form-control" placeholder="Prénom" required name="prenom" #prenom="ngModel" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nom</label>
+          <input type="text" class="form-control" placeholder="Nom" required name="nom" #nom="ngModel" ngModel>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Téléphone</label>
+            <input type="number" class="form-control" placeholder="Téléphone" required name="telephone" #telephone="ngModel" ngModel>
+          </div>
+          <div class="alert alert-danger" *ngIf="msgError">{{msgError}}</div>
+     <button class="btn btn-primary" >Ajouter</button>
+    </form>
+  
+  
+  
+  </div>
